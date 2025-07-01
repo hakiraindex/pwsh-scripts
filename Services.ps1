@@ -63,4 +63,4 @@ class Service {
 $AllServices = Get-WmiObject win32_service | select Name, DisplayName, State, PathName
 Get-ServiceDetailed -Services $AllServices
 
-Return $global:ReturnData
+Return $global:ReturnData | Out-GriedView
